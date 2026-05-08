@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "outline": "#827560",
+                        "secondary-fixed-dim": "#c6c6c7",
+                        "surface-container-low": "#fef2e1",
+                        "primary": "#7a5900",
+                        "secondary": "#5d5f5f",
+                        "on-secondary-fixed": "#1a1c1c",
+                        "surface-container": "#f8ecdc",
+                        "on-primary": "#ffffff",
+                        "on-background": "#201b11",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#4b4e4f",
+                        "on-primary-fixed-variant": "#5d4200",
+                        "surface-tint": "#7a5900",
+                        "on-primary-fixed": "#261900",
+                        "tertiary-container": "#bdbfc0",
+                        "primary-fixed": "#ffdea3",
+                        "secondary-fixed": "#e2e2e2",
+                        "outline-variant": "#d4c4ac",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#e4d8c8",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fff8f2",
+                        "surface-container-high": "#f3e6d6",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#e1e3e4",
+                        "primary-fixed-dim": "#fdbc13",
+                        "surface-variant": "#ede1d1",
+                        "on-secondary-fixed-variant": "#454747",
+                        "inverse-primary": "#fdbc13",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "inverse-surface": "#363025",
+                        "on-primary-container": "#654800",
+                        "on-surface-variant": "#504533",
+                        "error": "#ba1a1a",
+                        "primary-container": "#f4b400",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#201b11",
+                        "tertiary": "#5c5f60",
+                        "surface-container-highest": "#ede1d1",
+                        "inverse-on-surface": "#fbefde",
+                        "on-secondary-container": "#616363",
+                        "background": "#fff8f2",
+                        "surface": "#fff8f2",
+                        "secondary-container": "#dfe0e0",
+                        "on-tertiary-fixed": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-x": "64px",
+                        "section-padding": "120px",
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "h1": ["Noto Serif"],
+                        "h2": ["Noto Serif"],
+                        "label-caps": ["Inter"],
+                        "h3": ["Noto Serif"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "h1": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h2": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "h3": ["32px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .gold-glow {
+            filter: drop-shadow(0 0 15px rgba(244, 180, 0, 0.25));
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .project-card-hover img {
+            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .project-card-hover:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin-x py-6 max-w-container-max mx-auto">
+<div class="font-h3 text-h3 font-bold text-primary tracking-tighter">DUBAI ELITE</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Home</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Properties</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="#">Projects</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">About Us</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-primary text-2xl">search</button>
+<button class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-caps uppercase tracking-widest gold-glow hover:bg-primary-fixed-dim transition-all">Book a Viewing</button>
+</div>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[870px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="An awe-inspiring cinematic shot of the Dubai skyline at golden hour, featuring architectural masterpieces and futuristic skyscrapers reflecting the warm sunset light. The atmosphere is prestigious and expansive, with soft hazy horizons and a sophisticated palette of deep golds, soft creams, and modern glass textures that define the luxury real estate market." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2jag5HltDiHQ2xPTf_8d0gGY4tZTwSP-0ktm9eBapLlD1zDZw31VsWy6XPNvHpwYqK0pbXVsQr5a5dSqGqi46zb4yVKUkH0H2AA1U4cfV8mm9bNIEx1y2XSVWrEQ_nbJPhIY-M3R5zUVuMZbOC9CIvzJChlshNDLCDouJ7T3RuGIFEB0yEs3qTyutRMgBUCPUbA8EkSXV8wMl6G8lti5U1IsmLyEFF0J1on3-kvQGDpKJq7tlXGh-IrdGdKI99HicUCPMvxKkFByv"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-x max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<span class="font-label-caps text-primary mb-4 block uppercase">Architectural Landmarks</span>
+<h1 class="font-h1 text-h1 text-on-background mb-8">Redefining the <br/><span class="italic font-light">Dubai Skyline.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">Experience the pinnacle of urban living through our curated portfolio of ultra-luxury developments. From beachfront masterpieces to towering architectural icons.</p>
+<div class="flex gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-caps uppercase tracking-widest gold-glow flex items-center gap-2" href="#ongoing">
+                            Explore Ongoing
+                            <span class="material-symbols-outlined text-sm">arrow_downward</span>
+</a>
+<button class="glass-panel border border-outline-variant/30 text-on-surface px-8 py-4 rounded-full font-label-caps uppercase tracking-widest hover:bg-white transition-all">View Showcase</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats / Quick Filters -->
+<section class="py-12 bg-surface-container-lowest border-y border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-x grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div class="text-center">
+<div class="font-h3 text-h3 text-primary">12+</div>
+<div class="font-label-caps text-on-surface-variant">Active Projects</div>
+</div>
+<div class="text-center">
+<div class="font-h3 text-h3 text-primary">4500</div>
+<div class="font-label-caps text-on-surface-variant">Units Delivered</div>
+</div>
+<div class="text-center">
+<div class="font-h3 text-h3 text-primary">$4.2B</div>
+<div class="font-label-caps text-on-surface-variant">Portfolio Value</div>
+</div>
+<div class="text-center">
+<div class="font-h3 text-h3 text-primary">98%</div>
+<div class="font-label-caps text-on-surface-variant">Occupancy Rate</div>
+</div>
+</div>
+</section>
+<!-- Ongoing Projects Section -->
+<section class="py-section-padding bg-background" id="ongoing">
+<div class="max-w-container-max mx-auto px-margin-x">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="font-label-caps text-primary uppercase">Current Developments</span>
+<h2 class="font-h2 text-h2 mt-2">The Future Unfolding</h2>
+</div>
+<div class="flex gap-4">
+<button class="p-4 border border-outline-variant rounded-full hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">west</span>
+</button>
+<button class="p-4 border border-outline-variant rounded-full hover:bg-primary hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">east</span>
+</button>
+</div>
+</div>
+<!-- Bento Grid for Ongoing Projects -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Project 1: Featured Large -->
+<div class="col-span-12 lg:col-span-8 group project-card-hover relative overflow-hidden rounded-xl h-[600px] shadow-lg">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A modern architectural rendering of a high-rise luxury residential tower in Dubai, featuring innovative glass facades and lush vertical gardens on various levels. The building is captured in clear daylight with high-end photographic precision, emphasizing clean lines and sophisticated architectural textures in a high-luxury, modern minimalist setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfPgIjuilS98K-_IhMrMqDUfXL76ErEHoN0e33GXq90XmZCGIbufVdiiRI-v1mCGBiBC3IFeXfWk17w7_Yevyip0od_vLHfeHwkepJhg_Fl0uGeYFUPnArtptFVnI_tNDmmWRDRhKik16Yut-VAeYWwAUDJiaXD9RJvh6lAuVVzTaWra-u82Ldm7xgWZCHF-pn8eYsRwpOGamZQ4PtYxXigEjldhlUxtFKLe3NflnuKGsyaOVez-P-CaIr9c6dewP6ZtGjSo3ElQLZ"/>
+<div class="absolute top-6 left-6 flex gap-2">
+<span class="bg-primary/90 text-on-primary px-3 py-1 rounded-full text-xs font-label-caps uppercase flex items-center gap-1">
+<span class="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                                Under Construction
+                            </span>
+<span class="glass-panel text-on-surface px-3 py-1 rounded-full text-xs font-label-caps uppercase">75% Complete</span>
+</div>
+<div class="absolute bottom-0 left-0 right-0 glass-panel p-8 m-6 rounded-xl border border-white/20">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-h3 text-h3 mb-2">The Zenith Residences</h3>
+<p class="text-on-surface-variant font-body-md mb-4">Palm Jumeirah's newest architectural icon featuring 360-degree ocean views.</p>
+<div class="w-full bg-outline-variant/30 h-1 rounded-full mb-2">
+<div class="bg-primary h-full w-3/4 rounded-full"></div>
+</div>
+<div class="flex justify-between text-xs font-label-caps text-on-surface-variant">
+<span>Excavation Finished</span>
+<span>Est. Completion: Q4 2025</span>
+</div>
+</div>
+<a class="bg-primary text-on-primary p-4 rounded-full gold-glow hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">trending_flat</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Project 2: Side Stack -->
+<div class="col-span-12 lg:col-span-4 flex flex-col gap-gutter">
+<div class="flex-1 group project-card-hover relative overflow-hidden rounded-xl shadow-lg">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Close-up detail of a luxury villa's exterior with golden travertine stone and minimalist infinity pool reflecting a blue sky. The lighting is crisp and sophisticated, highlighting the premium craftsmanship and billionaire lifestyle aesthetic of Dubai Elite's property developments." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyjvNHBilQ7NIbaDdQDU1oKqJMIxaUYyxyNx5pwI7E1yJZ_IlHrzLOuhl-iG3hnXfMfGWQsRrCnYp2wUtHawFFj7kOjroDnAzMKQ-OhWkWl4oG3XMAjKurysrLQgo5YyaGzMr2lDmSNfFMikQZq9W_XEHNbel0dZdBVoKZxbGN9NKsXWV0vHNJgwKshW5e6IPPv7A8yGjem-nzHx4zXvnoNIE_-xFPgMu1UjK-rxrDYO9CQtUS_ny7II9dgRZf-cpSIXGnmRbyXe96"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<h4 class="font-h3 text-lg text-white mb-1">Amber Quay Villas</h4>
+<div class="flex items-center gap-2 text-white/80 text-xs font-label-caps">
+<span class="material-symbols-outlined text-sm">schedule</span>
+                                    On Schedule
+                                </div>
+</div>
+</div>
+<div class="flex-1 group project-card-hover relative overflow-hidden rounded-xl shadow-lg">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Stunning aerial view of a master-planned community development in Dubai with elegant white villas and integrated parks. The lighting is midday bright, evoking a sense of clarity, precision, and high-end urban design within a serene, exclusive neighborhood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBygRakNCTE67ou5aVZao3bGXs91mQkw9uvTMvTgJu59YSuoVx0a_r1yeNaPpFSRqTOjqlZ4hEzRB-cg7AI7e0DX824KItD8brFSv-586-tyy-vdVIvamSh8x-NNcVCqKkU9lnMCZSfKnIr_x-RFjHHvUFcZxFp1VGNgD3kU7MtFRmqNqQXOKTIoPgBMksEp0C2mMoa0pj0ax75vyYRJz6wiOkK79wMXfYYtan771n_HPp8uaT0ENVFLus7-p_pJPGHzGhH3qdoI4EW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<h4 class="font-h3 text-lg text-white mb-1">Horizon Terraces</h4>
+<div class="flex items-center gap-2 text-white/80 text-xs font-label-caps">
+<span class="material-symbols-outlined text-sm">construction</span>
+                                    Structure Complete
+                                </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Video Walkthrough CTA -->
+<section class="relative h-[500px] w-full overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover brightness-50" data-alt="Interior view of a luxurious penthouse living room with floor-to-ceiling windows overlooking the Dubai Marina. The interior design is ultra-modern with gold accents, soft cream leather, and ambient architectural lighting. The scene represents an high-end walkthrough experience for elite property investors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqhc0E_qc9ALBxHmdBE2TrWEpfmPTq8W6qBRPXS8KLJCTqiVRLyejgf-v5lkTyi74iBXhTu_rGUncxrmvwIS0EHSQ2Xoqc-TnC485jX2VlvhD6JfJI-yEFRawencJiyYA9WrKVjzj70lnoA6jGwDSAyfWxvn2a1HADh_nxahJsg445YiIH8dEWnXVYobSncu7EyEJ-WwAEzSkpjpILSsmS1z9-Cgtmhqgz-m3ZpDZrWgnY-Y7t3wAfGETDBSmcA-7dOsTpj_GG_2ZV"/>
+</div>
+<div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-margin-x">
+<button class="w-24 h-24 rounded-full glass-panel flex items-center justify-center border border-white/40 mb-8 hover:scale-110 transition-all gold-glow group">
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<h2 class="font-h2 text-h2 text-white mb-4">The Virtual Experience</h2>
+<p class="text-white/80 max-w-xl mx-auto mb-8 font-body-lg">Immerse yourself in our latest developments with 4K cinematic walkthroughs and developer commentary.</p>
+<button class="bg-primary text-on-primary px-10 py-4 rounded-full font-label-caps uppercase tracking-widest gold-glow">Request 3D Tour</button>
+</div>
+</section>
+<!-- Completed Projects Section -->
+<section class="py-section-padding bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-x">
+<div class="text-center mb-16">
+<span class="font-label-caps text-primary uppercase">Portfolio of Excellence</span>
+<h2 class="font-h2 text-h2 mt-2">Completed Masterpieces</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Project 1 -->
+<div class="group bg-surface-bright rounded-xl overflow-hidden shadow-sm border border-outline-variant/10">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A completed luxury residential complex with elegant white balconies and reflecting pools at dusk. The building is illuminated with warm, soft lights, creating a serene and successful atmosphere. The photography captures the building as a finished, prestigious landmark in a minimalist and clean aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmovJgZov4E0kXwCsrFoP2RieHszKninv-cIrhj_taWYa8OamLZjhgEq7W5_mE_widgYLdgJurtq3Jl694xn7A8UA7W1IUDxY8cb0USB6vD7Ta1-6Ql8Ny9xppEaf5T_xUG0dFIO1N731znGqbpDBi_5rU_1FW3NESwROJDmo2WoQv7S4sI6F0E6H5_ebN5sOYDj3NSgrFEb45PmFmk2NbhFAaqEj8DrqXmU1m54DIw_a_i8J_h_aHB0FeXJTX8VSR-VQYsXwFhPaM"/>
+<span class="absolute top-4 right-4 bg-white text-on-surface px-3 py-1 rounded-full text-[10px] font-label-caps uppercase">Delivered 2023</span>
+</div>
+<div class="p-8">
+<h3 class="font-h3 text-h3 text-xl mb-3">Azure Bay Mansions</h3>
+<p class="text-on-surface-variant font-body-md mb-6 line-clamp-2">A testament to coastal luxury, featuring 12 exclusive waterfront estates delivered with 100% occupancy.</p>
+<div class="flex items-center gap-4 py-4 border-t border-outline-variant/20">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARew0i_ihpgUYZyRyUg5mWG4RfEWRVwOAygtj-zPnFxbxqbYRbMc9X1ihE9HJAyDNhGh5vZyJps-9zu6XP-LjrBtOE88EwSTny3fUG9lkS-53XMNNVEJRZdkHDmTDN1KvuCnWydlUFzPybrfxaFGm8IAg94V4FQUxWhX6jOIxcH1rG_BOA4sz_E7kC5M67iIx_CPbx63KcXwcqRdXLjhNmCx4SHVTDj2Pvp9ZQYsuJOueQVPc9qW4RkRVV8c2vfchGy5SedZo5fi3m"/>
+<div>
+<p class="text-xs font-bold">James R. Thompson</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter italic">"A masterpiece in every detail."</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group bg-surface-bright rounded-xl overflow-hidden shadow-sm border border-outline-variant/10">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A striking minimalist modern office and residential tower with a glass curtain wall, reflecting the clear blue Dubai sky. The architecture is sharp and futuristic, showcasing a high-end, clean-lined project that has been fully completed and operational, emphasizing professional success and architectural integrity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOdHL7F11zQMwxMh3MF66P3Xo2B_EXdcpUkv22foTQcyAottYjMcvwZI-98MehYx3ggojWmUqNuofbF_q50J2pnMZeK_cW5nfjScm-N6IA3-XA4JsftXp6-NrEumjg_GUxecIiiFF8JHi4RlF78p2bw6_aoTiBn3xaG7rzew3RtjZ2nHKdc7EkI-bUjENSmuSYTM8wSCW79-QGHHWhGoXgEGh7RtueEoe0GwhdjNhdbov4g3kA5_wcxRtAiOM2G4rl1N_z0IBWdY-p"/>
+<span class="absolute top-4 right-4 bg-white text-on-surface px-3 py-1 rounded-full text-[10px] font-label-caps uppercase">Delivered 2022</span>
+</div>
+<div class="p-8">
+<h3 class="font-h3 text-h3 text-xl mb-3">Titanium Towers</h3>
+<p class="text-on-surface-variant font-body-md mb-6 line-clamp-2">Business Bay's premier commercial and residential hub, setting new standards in urban architecture.</p>
+<div class="flex items-center gap-4 py-4 border-t border-outline-variant/20">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4rrzblzJITq1SphddgcuIxsv7949n8Q4kcxs8kJMoC9hk4oycvew3P34i4mBkmKayVgGfG1oEjmHT7Sye2eYC9tGYVjheSnq6xeRkt5XVWQVGH4tHOthom8xWQ4dkUx9ESDNmKFfWPzhaNytPLj989woQ6iWUQYaHaj3kxtts2ttyccrAH8BbsW76XTPPgGYElwXVMVv39n6oSmlUp8b-zzQsmoYAuMpMoubDf-025n3IdQYkv4g3inEOS8Yhzqu5wqBIijeAN9JD"/>
+<div>
+<p class="text-xs font-bold">Sarah Al-Maktoum</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter italic">"Flawless execution by the team."</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group bg-surface-bright rounded-xl overflow-hidden shadow-sm border border-outline-variant/10">
+<div class="relative h-72 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A luxury villa garden with a large pool and pristine white outdoor lounge furniture. The landscaping is perfectly manicured with palm trees and soft ambient lighting. This finished residential project radiates an atmosphere of aspirational calm, high-end comfort, and billion-dollar architectural prestige." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5V7Mq5-180AdV-u5o9kE3HP-lZEVbzO-rtyfGbZW3licXQuayOoecQIOwt7FAzAD1fhhTmkEArKk6R-fCsmL4k5ljHhfpk2wQOGZJRZ8j-dtOAyHtEfOzrlaABQCdh1fT_RlR0iei5jNuxts8M5LEaaIOrjVE89bTnoPeMj3GVZkQU4HOJTaLGDgJpzCEOZkIpnLfEJT8PinC2cQtahnpQujW-F0NIzZmTm0dBocRrsKC3MAmELcDKqpOtvURq-orYxAnDaS5IaZT"/>
+<span class="absolute top-4 right-4 bg-white text-on-surface px-3 py-1 rounded-full text-[10px] font-label-caps uppercase">Delivered 2021</span>
+</div>
+<div class="p-8">
+<h3 class="font-h3 text-h3 text-xl mb-3">The Oasis Estate</h3>
+<p class="text-on-surface-variant font-body-md mb-6 line-clamp-2">A secluded sanctuary of 45 sustainable villas integrated with nature-inspired architecture.</p>
+<div class="flex items-center gap-4 py-4 border-t border-outline-variant/20">
+<img class="w-12 h-12 rounded-full object-cover border-2 border-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBfy1Rw1GObQ1Av8SvmQYHrgqfjbO47GzED0M78I73d3Ie0TiNAHGbIUn6TkoHbVCbSY45Fj8c5RBTqd84lGh0WMXI1aMcGMQEotbWJEztXnJ0PrqDSrHUPWIJciFUPc4irNvWhZXTLAVWsW5wz0JWSHKwFzymaMF8KmEbSBdHwHpV2DbvhoI5h6GxsAyVtyzfoIvVwqTEpYL2aPy3d23kHwNgDhFuDwWH2pdkKFcSbhSn51My_hWIehP0zll9JzAzNbBhSqlaTAbY"/>
+<div>
+<p class="text-xs font-bold">David Chen</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-tighter italic">"A true sanctuary in the city."</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<button class="border border-primary text-primary px-12 py-4 rounded-full font-label-caps uppercase tracking-widest hover:bg-primary hover:text-on-primary transition-all">View Full Archive</button>
+</div>
+</div>
+</section>
+<!-- Newsletter / Consultation Section -->
+<section class="py-section-padding px-margin-x">
+<div class="max-w-container-max mx-auto glass-panel p-16 rounded-[2rem] border border-outline-variant/30 flex flex-col md:flex-row items-center gap-gutter shadow-xl">
+<div class="flex-1">
+<h2 class="font-h2 text-h2 mb-4">Invest in the <br/><span class="text-primary">Elite Future</span></h2>
+<p class="text-on-surface-variant font-body-lg mb-8">Receive priority invitations to private pre-launch events and early investor pricing for our upcoming global landmarks.</p>
+<form class="flex gap-4">
+<input class="flex-1 bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary py-4 font-body-md placeholder:text-outline-variant" placeholder="Professional Email Address" type="email"/>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-caps uppercase tracking-widest gold-glow">Subscribe</button>
+</form>
+</div>
+<div class="flex-1 w-full md:w-auto">
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center text-center p-6 border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">event_available</span>
+<p class="font-label-caps text-[10px] uppercase">Schedule A Visit</p>
+</div>
+<div class="aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center text-center p-6 border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">download_2</span>
+<p class="font-label-caps text-[10px] uppercase">Investor Guide</p>
+</div>
+<div class="aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center text-center p-6 border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">support_agent</span>
+<p class="font-label-caps text-[10px] uppercase">Priority Support</p>
+</div>
+<div class="aspect-square bg-surface-container rounded-2xl flex flex-col items-center justify-center text-center p-6 border border-outline-variant/10">
+<span class="material-symbols-outlined text-4xl text-primary mb-2">location_on</span>
+<p class="font-label-caps text-[10px] uppercase">Project Map</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-x py-section-padding gap-gutter max-w-container-max mx-auto">
+<div class="max-w-sm">
+<div class="font-h2 text-h2 font-semibold text-primary mb-6">DUBAI ELITE</div>
+<p class="font-body-md text-on-surface-variant mb-8">Crafting the world's most prestigious living experiences. From Dubai to the world, prestige redefined.</p>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">public</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mail</span>
+</div>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-3 gap-16">
+<div>
+<h5 class="font-label-caps text-on-surface mb-6 uppercase">Company</h5>
+<ul class="flex flex-col gap-3 font-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">About Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press Office</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-on-surface mb-6 uppercase">Legal</h5>
+<ul class="flex flex-col gap-3 font-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Cookie Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-on-surface mb-6 uppercase">Resources</h5>
+<ul class="flex flex-col gap-3 font-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors" href="#">Investment Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Market Reports</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Brochures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-x py-8 border-t border-outline-variant/10 text-center md:text-left">
+<p class="font-body-md text-on-surface-variant text-xs uppercase tracking-widest">© 2024 DUBAI ELITE REAL ESTATE. PRESTIGE DEFINED.</p>
+</div>
+</footer>
+</body></html>

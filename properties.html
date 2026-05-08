@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Properties | DUBAI ELITE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "error-container": "#ffdad6",
+          "outline": "#827560",
+          "secondary-fixed-dim": "#c6c6c7",
+          "surface-container-low": "#fef2e1",
+          "primary": "#7a5900",
+          "secondary": "#5d5f5f",
+          "on-secondary-fixed": "#1a1c1c",
+          "surface-container": "#f8ecdc",
+          "on-primary": "#ffffff",
+          "on-background": "#201b11",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary-container": "#4b4e4f",
+          "on-primary-fixed-variant": "#5d4200",
+          "surface-tint": "#7a5900",
+          "on-primary-fixed": "#261900",
+          "tertiary-container": "#bdbfc0",
+          "primary-fixed": "#ffdea3",
+          "secondary-fixed": "#e2e2e2",
+          "outline-variant": "#d4c4ac",
+          "on-secondary": "#ffffff",
+          "surface-dim": "#e4d8c8",
+          "on-error": "#ffffff",
+          "surface-bright": "#fff8f2",
+          "surface-container-high": "#f3e6d6",
+          "on-error-container": "#93000a",
+          "tertiary-fixed": "#e1e3e4",
+          "primary-fixed-dim": "#fdbc13",
+          "surface-variant": "#ede1d1",
+          "on-secondary-fixed-variant": "#454747",
+          "inverse-primary": "#fdbc13",
+          "on-tertiary-fixed-variant": "#454748",
+          "inverse-surface": "#363025",
+          "on-primary-container": "#654800",
+          "on-surface-variant": "#504533",
+          error: "#ba1a1a",
+          "primary-container": "#f4b400",
+          "tertiary-fixed-dim": "#c5c7c8",
+          "on-tertiary": "#ffffff",
+          "on-surface": "#201b11",
+          tertiary: "#5c5f60",
+          "surface-container-highest": "#ede1d1",
+          "inverse-on-surface": "#fbefde",
+          "on-secondary-container": "#616363",
+          background: "#fff8f2",
+          surface: "#fff8f2",
+          "secondary-container": "#dfe0e0",
+          "on-tertiary-fixed": "#191c1d"
+        },
+        borderRadius: {
+          DEFAULT: "0.125rem",
+          lg: "0.25rem",
+          xl: "0.5rem",
+          full: "0.75rem"
+        },
+        spacing: {
+          "margin-x": "64px",
+          "section-padding": "120px",
+          gutter: "32px",
+          unit: "8px",
+          "container-max": "1440px"
+        },
+        fontFamily: {
+          "body-lg": ["Inter"],
+          h1: ["Noto Serif"],
+          h2: ["Noto Serif"],
+          "label-caps": ["Inter"],
+          h3: ["Noto Serif"],
+          "body-md": ["Inter"]
+        },
+        fontSize: {
+          "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "400"}],
+          h1: ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          h2: ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+          h3: ["32px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500"}],
+          "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}]
+        }
+      }
+    }
+  }
+</script>
+<style>
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.gold-glow {
+  filter: drop-shadow(0 0 15px rgba(244, 180, 0, 0.25));
+}
+.gold-glow-hover:hover {
+  filter: drop-shadow(0 0 20px rgba(244, 180, 0, 0.4));
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+</style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center w-full px-margin-x py-6 max-w-container-max mx-auto">
+<a href="index.html" class="font-h3 text-h3 font-bold text-primary tracking-tighter">DUBAI ELITE</a>
+<div class="hidden md:flex items-center gap-8 font-body-md text-body-md uppercase tracking-widest">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="home.html">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1" href="properties.html">Properties</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="projects.html">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="contact.html">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-primary text-[24px]">search</button>
+<a href="contact.html" class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-caps uppercase tracking-widest gold-glow-hover transition-all">Book a Viewing</a>
+</div>
+</div>
+</nav>
+<main class="pt-[100px]">
+<!-- Hero Search Section -->
+<section class="px-margin-x py-12 bg-surface-container-low/30">
+<div class="max-w-container-max mx-auto">
+<h1 class="font-h1 text-h1 text-on-background mb-8">Curated Collections</h1>
+<!-- Floating Filters Bar -->
+<div class="glass-card p-4 rounded-xl flex flex-wrap items-center gap-6 shadow-sm sticky top-[100px] z-40 transition-all duration-300">
+<div class="flex-1 min-w-[200px]">
+<span class="font-label-caps text-on-surface-variant mb-2 block">Location</span>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-1 px-0">
+<option>Palm Jumeirah</option>
+<option>Dubai Marina</option>
+<option>Downtown Dubai</option>
+<option>Emirates Hills</option>
+</select>
+</div>
+<div class="flex-1 min-w-[200px]">
+<span class="font-label-caps text-on-surface-variant mb-2 block">Property Type</span>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-1 px-0">
+<option>Luxury Villa</option>
+<option>Penthouse</option>
+<option>Waterfront Apartment</option>
+</select>
+</div>
+<div class="flex-1 min-w-[200px]">
+<span class="font-label-caps text-on-surface-variant mb-2 block">Price Range</span>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 text-on-surface py-1 px-0">
+<option>AED 5M - 10M</option>
+<option>AED 10M - 25M</option>
+<option>AED 25M+</option>
+</select>
+</div>
+<button class="bg-primary-container text-on-primary-container h-[56px] px-8 rounded-lg font-label-caps uppercase flex items-center gap-2 gold-glow-hover">
+<span class="material-symbols-outlined">filter_list</span>
+Search Elite
+</button>
+</div>
+</div>
+</section>
+<!-- Main Hybrid Content -->
+<section class="flex flex-col lg:flex-row h-auto min-h-screen">
+<!-- Property List -->
+<div class="w-full lg:w-3/5 px-margin-x py-12 order-2 lg:order-1">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="font-label-caps text-primary mb-2 block">Found 24 Exclusive Estates</span>
+<h2 class="font-h2 text-h2">Available Properties</h2>
+</div>
+<div class="flex gap-4">
+<button class="p-2 border border-outline-variant rounded-full text-on-surface-variant hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">grid_view</span>
+</button>
+<button class="p-2 border border-outline-variant rounded-full text-on-surface-variant hover:border-primary hover:text-primary transition-all">
+<span class="material-symbols-outlined">list</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Property Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden gold-glow-hover transition-all duration-500">
+<div class="relative h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSZ91gfilLYWAT4Q4d5uy9rPO5QzuQxhXUlJHEbgAvCjS0Cyf4jDr1TjeEHbDP20Vbn3ORPi0EHaKyByePR30t1MLKlbtC9hgxRxfYz7UKyuzCjQtMLkH3BZMrKfNTEC1ZWD-64tc3rzC55c2cwInmKb_dTg3rzb-KiqVzUplOjizs6MRi7Ly7_rvkc-a9Aam3TmSw4tHJneOMTmjE7iA-O_dpNmJ0XkHGL2eHXVSTS50wSJHa65VXtiq0IhIyIyWN9kj6NsyCj7Qi"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-inverse-surface text-on-primary px-3 py-1 text-[10px] font-label-caps uppercase rounded">Exclusive</span>
+<span class="bg-primary text-on-primary px-3 py-1 text-[10px] font-label-caps uppercase rounded">Virtual Tour</span>
+</div>
+<button class="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:text-error transition-all">
+<span class="material-symbols-outlined" data-weight="fill">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-h3 text-[24px] mb-1">Serene Sands Villa</h3>
+<p class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+Palm Jumeirah, Dubai
+</p>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-primary">Starting From</p>
+<p class="font-h3 text-primary text-[24px]">AED 34,500,000</p>
+</div>
+</div>
+<div class="flex gap-6 mb-8 py-4 border-y border-outline-variant/30 text-on-surface-variant text-[14px]">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">bed</span> 6 Beds</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">shower</span> 8 Baths</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">square_foot</span> 12,400 sqft</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 border border-outline text-on-surface py-3 rounded font-label-caps uppercase tracking-widest hover:bg-surface-container transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">download</span>
+Brochure
+</button>
+<button class="flex-1 bg-[#25D366] text-white py-3 rounded font-label-caps uppercase tracking-widest hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+WhatsApp
+</button>
+</div>
+</div>
+</div>
+<!-- Property Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-xl overflow-hidden gold-glow-hover transition-all duration-500">
+<div class="relative h-[400px] overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkM6GCTFth-KqtF9RFjHlwUoI-qOUGp9Qmrlsf5agCrRGwxOSsDu7s4uad1CykFyUPdYB8UWZzoZ8qVKAm6znnEGkhdMy9XipgE0detvqT8hIo5gwNqchFi85HUzC91AgnHDfWng39vtbY-3awGiaSGHf3xNcWR8THadrNs4VViHKglHwMabuR3vWYDQxeiWbs3MyWwcJU1Xpfp9NqrBAjJkUAgQ-GTCud6R-cWjvbCzYbLhK29Sp6C-bn3S0geBa-WiwDZxCm4AEd"/>
+<div class="absolute top-4 left-4 flex flex-col gap-2">
+<span class="bg-inverse-surface text-on-primary px-3 py-1 text-[10px] font-label-caps uppercase rounded">Off-Plan</span>
+</div>
+<button class="absolute top-4 right-4 p-2 bg-white/20 backdrop-blur-md rounded-full text-white hover:text-error transition-all">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-h3 text-[24px] mb-1">Azure Skyline Penthouse</h3>
+<p class="text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+Downtown Dubai
+</p>
+</div>
+<div class="text-right">
+<p class="font-label-caps text-primary">Starting From</p>
+<p class="font-h3 text-primary text-[24px]">AED 18,900,000</p>
+</div>
+</div>
+<div class="flex gap-6 mb-8 py-4 border-y border-outline-variant/30 text-on-surface-variant text-[14px]">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">bed</span> 4 Beds</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">shower</span> 5 Baths</span>
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-primary">square_foot</span> 5,800 sqft</span>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 border border-outline text-on-surface py-3 rounded font-label-caps uppercase tracking-widest hover:bg-surface-container transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">download</span>
+Brochure
+</button>
+<button class="flex-1 bg-[#25D366] text-white py-3 rounded font-label-caps uppercase tracking-widest hover:opacity-90 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+WhatsApp
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Map View -->
+<div class="w-full lg:w-2/5 order-1 lg:order-2 sticky top-[100px] h-[calc(100vh-100px)] bg-surface-container">
+<div class="absolute inset-0 grayscale contrast-125 opacity-80">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDE-8d8ER3pmjAiKI_vhP7evfxXlqP1vg_UczYRtFpi1UMD4e8U817vWJL6J2pYQekK41O_Cv1ItGAGErUeedKC0K-tb3EImyNCiDuBOW3UbjVg3VnqVBSaks3Gy3i8ax3FwlqpuM4Jg66ROk7fCDf2IbqVhnY3LFc-xW1gkguIuzcfWwbHnxsmFI2aAzLAkUnSdgouLOtMlPorqPWD652r4eNOwJyiv2ltJaUj6HoB1ZQmXi6_vh5UN2qoSQiNz4va3JeBBSMqGe3"/>
+</div>
+<!-- Custom Map Markers -->
+<div class="absolute top-1/3 left-1/3 group">
+<div class="bg-primary text-on-primary px-4 py-2 rounded-full font-bold text-[14px] shadow-lg cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-110 transition-all gold-glow">
+AED 34.5M
+<div class="absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 bg-primary rotate-45"></div>
+</div>
+</div>
+<div class="absolute top-1/2 right-1/4 group">
+<div class="bg-inverse-surface text-on-primary px-4 py-2 rounded-full font-bold text-[14px] shadow-lg cursor-pointer transform -translate-x-1/2 -translate-y-1/2 hover:scale-110 transition-all">
+AED 18.9M
+<div class="absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 bg-inverse-surface rotate-45"></div>
+</div>
+</div>
+<!-- Floating Map Controls -->
+<div class="absolute bottom-8 right-8 flex flex-col gap-2">
+<button class="w-12 h-12 bg-white shadow-xl rounded-lg flex items-center justify-center text-primary hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined">add</span>
+</button>
+<button class="w-12 h-12 bg-white shadow-xl rounded-lg flex items-center justify-center text-primary hover:bg-surface-container transition-all">
+<span class="material-symbols-outlined">remove</span>
+</button>
+<button class="w-12 h-12 bg-white shadow-xl rounded-lg flex items-center justify-center text-primary hover:bg-surface-container transition-all mt-4">
+<span class="material-symbols-outlined">my_location</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Similar Property Recommendations -->
+<section class="bg-surface py-section-padding border-t border-outline-variant/30">
+<div class="px-margin-x max-w-container-max mx-auto">
+<div class="flex justify-between items-center mb-12">
+<h2 class="font-h2 text-h2">Similar Elite Estates</h2>
+<div class="flex gap-4">
+<button class="w-12 h-12 border border-outline-variant rounded-full flex items-center justify-center text-on-surface hover:border-primary transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="w-12 h-12 border border-outline-variant rounded-full flex items-center justify-center text-on-surface hover:border-primary transition-all">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Recommended Item 1 -->
+<div class="group cursor-pointer">
+<div class="relative h-[250px] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB3Qtf8wohDcrAElt0oTomirbszGWm2_jIvI6rn0V5itfBAoAOu3pH0Az8RmrQQsdvDYDVMmlFzUqHizcHMFe2N11np32FqZ3H53qrOyyT5W4ksVLHQ9GM4Rgoi7UhWubdxW5BqvJ0L_Vo2sVKdFq7gTc3MgCQ7URa0sNHiJ2qdI2dilbneVQmHo8gjPq5nVD53R0a_sQBinMD-fqmHOxnkLH06exIpA3y43iWbQifCKcg6Il_VGdlpV6zKyUfmZrr3sunNnQFyg6h"/>
+<div class="absolute bottom-4 left-4 bg-white/80 backdrop-blur-md px-3 py-1 rounded">
+<span class="font-label-caps text-primary text-[10px]">AED 12,000,000</span>
+</div>
+</div>
+<h4 class="font-h3 text-[20px] mb-1">Marina Jewel</h4>
+<p class="text-on-surface-variant font-label-caps text-[12px] uppercase tracking-wider">3 Bedroom Apartment - Dubai Marina</p>
+</div>
+<!-- Recommended Item 2 -->
+<div class="group cursor-pointer">
+<div class="relative h-[250px] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQgS8auz5zb-mP67QxnTKf6ZsngmNlQLBthU0V8QewLIOCQkt5lPJgxk6xJmGcST3acML3k_F7welkfI6B-b1kc81JKsMAxjy7_6JqKOwaVrnN2xGaMJ33PxyDc4K67YbmIns4KFQT8K8yxKuIiZh4sI4TrSb4jY15FpFKD-WD8SrnpKoBADbdqXgYSGvLO7cJ8OkeYxqzAJZlfD8o-rQCkPtHWt8p9CFyOq10GdXmrRvzOnoPxUb3KcMy3o3BK0TiSZXg6SpYedUt"/>
+<div class="absolute bottom-4 left-4 bg-white/80 backdrop-blur-md px-3 py-1 rounded">
+<span class="font-label-caps text-primary text-[10px]">AED 45,500,000</span>
+</div>
+</div>
+<h4 class="font-h3 text-[20px] mb-1">Mountain Crest Manor</h4>
+<p class="text-on-surface-variant font-label-caps text-[12px] uppercase tracking-wider">7 Bedroom Villa - Emirates Hills</p>
+</div>
+<!-- Recommended Item 3 -->
+<div class="group cursor-pointer">
+<div class="relative h-[250px] rounded-lg overflow-hidden mb-4">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSY8h3dY7zuSiff6ihCe2D6hHbq5N69xpNTgEJRVs6_sOwwozkjsZtQ2TiCvgsMoAwApmEYC_DGsS1mz_rfVXWoqO2gPFGBeObPR5zkNgXdAArI9B4AOyu_OotCGADSSDirrv40Pf9sk54Rr0o_8BubUjZNs45KS16iqzni3OJHyVSftRwcxy0YxrKaKUFXQCRQvU2S1hlAb3IX3NHsUPd2F9rtne5S-_kAA4B9PQXjlYYEPWEP-aPwJ7Sf45Y5B-ZTtvHoEl5ue6-"/>
+<div class="absolute bottom-4 left-4 bg-white/80 backdrop-blur-md px-3 py-1 rounded">
+<span class="font-label-caps text-primary text-[10px]">AED 9,200,000</span>
+</div>
+</div>
+<h4 class="font-h3 text-[20px] mb-1">The Loft Zenith</h4>
+<p class="text-on-surface-variant font-label-caps text-[12px] uppercase tracking-wider">2 Bedroom Loft - City Walk</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-x py-section-padding gap-gutter max-w-container-max mx-auto">
+<div class="max-w-[400px]">
+<div class="font-h2 text-h2 font-semibold text-primary mb-6">DUBAI ELITE</div>
+<p class="text-on-surface-variant text-body-md mb-8">Redefining luxury living through architectural excellence and unmatched service in the heart of Dubai.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline-variant flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div>
+<h5 class="font-label-caps text-on-surface mb-6 uppercase">Quick Links</h5>
+<ul class="space-y-4 font-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="home.html">Properties</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="projects.html">Projects</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-on-surface mb-6 uppercase">Legal</h5>
+<ul class="space-y-4 font-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="px-margin-x py-8 border-t border-outline-variant/30 text-center text-on-surface-variant font-label-caps text-[10px] tracking-widest">
+  - 2024 DUBAI ELITE REAL ESTATE. PRESTIGE DEFINED.
+</div>
+</footer>
+</body>
+</html>

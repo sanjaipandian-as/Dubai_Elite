@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html class="scroll-smooth light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | DUBAI ELITE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@500;600;700&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "error-container": "#ffdad6",
+          "outline": "#827560",
+          "secondary-fixed-dim": "#c6c6c7",
+          "surface-container-low": "#fef2e1",
+          "primary": "#7a5900",
+          "secondary": "#5d5f5f",
+          "on-secondary-fixed": "#1a1c1c",
+          "surface-container": "#f8ecdc",
+          "on-primary": "#ffffff",
+          "on-background": "#201b11",
+          "surface-container-lowest": "#ffffff",
+          "on-tertiary-container": "#4b4e4f",
+          "on-primary-fixed-variant": "#5d4200",
+          "surface-tint": "#7a5900",
+          "on-primary-fixed": "#261900",
+          "tertiary-container": "#bdbfc0",
+          "primary-fixed": "#ffdea3",
+          "secondary-fixed": "#e2e2e2",
+          "outline-variant": "#d4c4ac",
+          "on-secondary": "#ffffff",
+          "surface-dim": "#e4d8c8",
+          "on-error": "#ffffff",
+          "surface-bright": "#fff8f2",
+          "surface-container-high": "#f3e6d6",
+          "on-error-container": "#93000a",
+          "tertiary-fixed": "#e1e3e4",
+          "primary-fixed-dim": "#fdbc13",
+          "surface-variant": "#ede1d1",
+          "on-secondary-fixed-variant": "#454747",
+          "inverse-primary": "#fdbc13",
+          "on-tertiary-fixed-variant": "#454748",
+          "inverse-surface": "#363025",
+          "on-primary-container": "#654800",
+          "on-surface-variant": "#504533",
+          error: "#ba1a1a",
+          "primary-container": "#f4b400",
+          "tertiary-fixed-dim": "#c5c7c8",
+          "on-tertiary": "#ffffff",
+          "on-surface": "#201b11",
+          tertiary: "#5c5f60",
+          "surface-container-highest": "#ede1d1",
+          "inverse-on-surface": "#fbefde",
+          "on-secondary-container": "#616363",
+          background: "#fff8f2",
+          surface: "#fff8f2",
+          "secondary-container": "#dfe0e0",
+          "on-tertiary-fixed": "#191c1d"
+        },
+        borderRadius: {
+          DEFAULT: "0.125rem",
+          lg: "0.25rem",
+          xl: "0.5rem",
+          full: "0.75rem"
+        },
+        spacing: {
+          "margin-x": "64px",
+          "section-padding": "120px",
+          gutter: "32px",
+          unit: "8px",
+          "container-max": "1440px"
+        },
+        fontFamily: {
+          "body-lg": ["Inter"],
+          h1: ["Noto Serif"],
+          h2: ["Noto Serif"],
+          "label-caps": ["Inter"],
+          h3: ["Noto Serif"],
+          "body-md": ["Inter"]
+        },
+        fontSize: {
+          "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "400"}],
+          h1: ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+          h2: ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+          "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+          h3: ["32px", {"lineHeight": "1.3", "letterSpacing": "0em", "fontWeight": "500"}],
+          "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}]
+        }
+      }
+    }
+  }
+</script>
+<style>
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.glass-effect {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 248, 242, 0.75);
+}
+.gold-glow {
+  filter: drop-shadow(0 0 15px rgba(244, 180, 0, 0.3));
+}
+.perspective-container {
+  perspective: 1000px;
+}
+</style>
+</head>
+<body class="bg-background text-on-surface font-body-md">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-surface/70 backdrop-blur-xl shadow-sm">
+<nav class="flex justify-between items-center w-full px-margin-x py-6 max-w-container-max mx-auto">
+<a href="index.html" class="font-h3 text-h3 font-bold text-primary tracking-tighter uppercase">DUBAI ELITE</a>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="home.html">Home</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="properties.html">Properties</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="projects.html">Projects</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="about.html">About Us</a>
+<a class="font-body-md text-body-md uppercase tracking-widest text-primary border-b-2 border-primary pb-1" href="contact.html">Contact</a>
+</div>
+<a href="contact.html" class="bg-primary text-on-primary px-6 py-3 rounded-full font-label-caps uppercase tracking-widest gold-glow hover:bg-primary-container transition-all">Book a Viewing</a>
+</nav>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover grayscale-[20%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQXexRKsCjAMK_dQ1AzFA9BKkcV0GOxhd7Q9xm8Pxz71syKBzpAMCB2AgMbP0lAkvJky7qyhB19jxVuKCq3rB1Dg-P089w-1vVg7iMyGMqjhrE9ImN1o1k2GzQ7JfoXbIdKY2iy94E-RcyPNjpOhd-SPI1Zl2U6DYw6W-uEoSKRGlzGf5wZ9kDfvJdqRvV9tCeCw5FUxnOvaG0SmWeYeS1UX5L8wpanquSgkNHgJi8gRToW0O9ENARwCgXNvCmdlcGW2cerNrILSse"/>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-background"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl px-margin-x">
+<span class="font-label-caps uppercase tracking-[0.3em] text-primary mb-4 block">Personalized Service</span>
+<h1 class="font-h1 text-h1 text-on-surface mb-6">Experience the Zenith of Dubai Real Estate</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Connect with our dedicated consultants to secure your place in the world's most dynamic skyline.</p>
+</div>
+</section>
+<!-- Main Content: Bento Layout -->
+<section class="px-margin-x py-section-padding max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Inquiry Form (Glassmorphism) -->
+<div class="lg:col-span-7 glass-effect p-10 rounded-xl border border-outline-variant/30 shadow-sm">
+<h2 class="font-h2 text-h2 mb-8">Direct Inquiry</h2>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="relative group">
+<label class="font-label-caps text-on-surface-variant mb-2 block">Full Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 py-3 transition-all outline-none" placeholder="Enter your name" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-on-surface-variant mb-2 block">Email Address</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 py-3 transition-all outline-none" placeholder="email@example.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="relative group">
+<label class="font-label-caps text-on-surface-variant mb-2 block">Phone Number</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 py-3 transition-all outline-none" placeholder="+971 -- --- ----" type="tel"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-on-surface-variant mb-2 block">Interest Type</label>
+<select class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 py-3 transition-all outline-none appearance-none">
+<option>Investment Opportunities</option>
+<option>Luxury Residential</option>
+<option>Off-Plan Projects</option>
+<option>Property Management</option>
+</select>
+</div>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-on-surface-variant mb-2 block">Message</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 py-3 transition-all outline-none resize-none" placeholder="Tell us about your requirements..." rows="4"></textarea>
+</div>
+<button class="w-full py-5 bg-primary text-on-primary font-label-caps uppercase tracking-widest rounded-lg gold-glow hover:bg-primary-container transition-all">Submit Inquiry</button>
+</form>
+</div>
+<!-- Book Site Visit Card -->
+<div class="lg:col-span-5 flex flex-col gap-gutter">
+<div class="bg-surface-container-high p-10 rounded-xl flex-grow border border-outline-variant/20">
+<div class="flex items-center gap-4 mb-6">
+<span class="material-symbols-outlined text-primary text-4xl">calendar_month</span>
+<h3 class="font-h3 text-h3">Book Site Visit</h3>
+</div>
+<p class="font-body-md text-on-surface-variant mb-8">Schedule a private architectural tour of our exclusive properties with a senior consultant.</p>
+<form class="space-y-6">
+<div>
+<label class="font-label-caps text-on-surface-variant mb-2 block">Preferred Date</label>
+<input class="w-full bg-surface-container border border-outline-variant rounded-lg p-4 focus:ring-1 focus:ring-primary outline-none" type="date"/>
+</div>
+<div>
+<label class="font-label-caps text-on-surface-variant mb-2 block">Preferred Time</label>
+<div class="grid grid-cols-2 gap-4">
+<button class="border border-primary bg-primary-container/20 text-primary p-3 rounded-lg font-label-caps" type="button">Morning</button>
+<button class="border border-outline-variant p-3 rounded-lg font-label-caps hover:border-primary transition-colors" type="button">Afternoon</button>
+</div>
+</div>
+<div class="pt-4">
+<button class="w-full py-4 border-2 border-primary text-primary font-label-caps uppercase tracking-widest rounded-lg hover:bg-primary hover:text-on-primary transition-all">Confirm Tour</button>
+</div>
+</form>
+</div>
+<!-- Contact Details Card -->
+<div class="bg-inverse-surface text-inverse-on-surface p-10 rounded-xl border border-outline/30 shadow-xl">
+<h4 class="font-label-caps uppercase tracking-widest text-primary-fixed mb-6">Office Headquarters</h4>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-fixed">location_on</span>
+<p class="text-body-md">Elite Plaza, Level 42, Downtown Dubai, United Arab Emirates</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-fixed">call</span>
+<p class="text-body-md">+971 4 000 0000</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-fixed">mail</span>
+<p class="text-body-md">concierge@dubai-elite.com</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map & Global Locations Section -->
+<section class="bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-x py-section-padding">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div>
+<h2 class="font-h2 text-h2 mb-6">Global Presence</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">While our heart beats in Dubai, our expertise spans the globe's most prestigious markets. Visit us at any of our curated experience centers.</p>
+<div class="space-y-4">
+<div class="p-6 bg-surface-container rounded-lg flex justify-between items-center group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div>
+<p class="font-h3 text-xl mb-1">Downtown Dubai</p>
+<p class="text-on-surface-variant text-sm uppercase tracking-wider">Main Headquarters</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward_ios</span>
+</div>
+<div class="p-6 border border-outline-variant rounded-lg flex justify-between items-center group cursor-pointer hover:border-primary transition-colors">
+<div>
+<p class="font-h3 text-xl mb-1">London, Mayfair</p>
+<p class="text-on-surface-variant text-sm uppercase tracking-wider">Investment Suite</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward_ios</span>
+</div>
+<div class="p-6 border border-outline-variant rounded-lg flex justify-between items-center group cursor-pointer hover:border-primary transition-colors">
+<div>
+<p class="font-h3 text-xl mb-1">Riyadh, KAFD</p>
+<p class="text-on-surface-variant text-sm uppercase tracking-wider">Regional Office</p>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward_ios</span>
+</div>
+</div>
+</div>
+<div class="h-[500px] rounded-xl overflow-hidden shadow-2xl relative">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIaW5LfZvqhRd8wvP0S9bgxDyoUACnEjjYRR30uIVHsKmqCF1b9ec3fJVS2c58BOUdHBE1_K-VtcB5lp4fyAd93a2s8HtrDctiUcdijA-pZxsLo0GLDeNB6dr3w4y2lUID7PnOox_RlG9BSiWwfJ0BfjoBN0w6lm3l335PDWDoKoq5ryBPrvcf576gQqTOBeIfdDV6W0cEisakn4czxldeH1S5AtULySD_ZPr0hxXk_MbMLjcQVk28wm9L4dS5IOhH65D3vR8xQczU"/>
+<div class="absolute bottom-8 left-8 right-8 glass-effect p-6 rounded-lg border border-white/40">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined">directions</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Main Office</p>
+<p class="text-sm text-on-surface-variant">Elite Plaza, Dubai Marina</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="max-w-4xl mx-auto px-margin-x py-section-padding">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 mb-4">Frequently Asked Questions</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="space-y-6">
+<div class="border-b border-outline-variant pb-6 group cursor-pointer">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-h3 text-xl">How do I qualify for the UAE Golden Visa through property?</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<p class="text-on-surface-variant hidden group-hover:block transition-all">Property investment starting from AED 2 million allows you to apply for a 10-year residency Golden Visa. Our consultants handle the entire legal process for you.</p>
+</div>
+<div class="border-b border-outline-variant pb-6 group cursor-pointer">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-h3 text-xl">Are there financing options for international buyers?</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<p class="text-on-surface-variant hidden group-hover:block transition-all">Yes, we partner with leading UAE banks to offer up to 50% mortgage financing for non-residents, subject to credit approval and documentation.</p>
+</div>
+<div class="border-b border-outline-variant pb-6 group cursor-pointer">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-h3 text-xl">What is the expected ROI for off-plan luxury projects?</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<p class="text-on-surface-variant hidden group-hover:block transition-all">Prime locations typically yield between 6-9% net rental ROI, with capital appreciation potential of 15-25% during the construction phase.</p>
+</div>
+<div class="border-b border-outline-variant pb-6 group cursor-pointer">
+<div class="flex justify-between items-center mb-4">
+<h4 class="font-h3 text-xl">Can I book a virtual viewing if I am currently overseas?</h4>
+<span class="material-symbols-outlined text-primary group-hover:rotate-180 transition-transform">expand_more</span>
+</div>
+<p class="text-on-surface-variant hidden group-hover:block transition-all">Absolutely. We offer high-definition 4K virtual walkthroughs and live video tours conducted by our expert property consultants.</p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="bg-primary text-on-primary py-section-padding px-margin-x text-center">
+<h2 class="font-h2 text-h2 mb-8">Ready to Secure Your Future?</h2>
+<p class="text-body-lg mb-10 opacity-90 max-w-2xl mx-auto">Our advisors are standing by to guide you through the most exclusive portfolios in the Middle East.</p>
+<div class="flex flex-col md:flex-row gap-gutter justify-center items-center">
+<button class="bg-on-primary text-primary px-10 py-5 rounded-full font-label-caps tracking-widest uppercase shadow-xl hover:scale-105 transition-transform">Request Brochure</button>
+<button class="border-2 border-on-primary text-on-primary px-10 py-5 rounded-full font-label-caps tracking-widest uppercase hover:bg-on-primary hover:text-primary transition-all">Speak to Advisor</button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-start px-margin-x py-section-padding gap-gutter max-w-container-max mx-auto w-full">
+<div class="flex flex-col gap-6 max-w-sm">
+<div class="font-h2 text-h2 font-semibold text-primary">DUBAI ELITE</div>
+<p class="text-on-surface-variant text-body-md">Redefining luxury living through architectural excellence and unmatched market expertise since 2010.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div class="flex flex-col gap-4">
+<h5 class="font-label-caps text-on-surface uppercase tracking-widest">Navigation</h5>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="home.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="properties.html">Properties</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="projects.html">Projects</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-caps text-on-surface uppercase tracking-widest">Resources</h5>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Investment Guide</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Press Office</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-caps text-on-surface uppercase tracking-widest">Legal</h5>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="px-margin-x py-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center text-on-surface-variant text-sm">
+<p> - 2024 DUBAI ELITE REAL ESTATE. PRESTIGE DEFINED.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<span class="material-symbols-outlined">social_leaderboard</span>
+<span class="material-symbols-outlined">share</span>
+<span class="material-symbols-outlined">rss_feed</span>
+</div>
+</div>
+</footer>
+<!-- Floating Actions -->
+<div class="fixed bottom-10 right-10 flex flex-col gap-4 z-50">
+<!-- AI Chatbot UI (Minimized State) -->
+<div class="bg-white p-4 rounded-full shadow-2xl border border-outline-variant gold-glow cursor-pointer hover:scale-110 transition-transform group flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+<span class="font-label-caps text-xs pr-2 overflow-hidden w-0 group-hover:w-auto transition-all whitespace-nowrap">AI ASSISTANT</span>
+</div>
+<!-- WhatsApp Button -->
+<div class="bg-[#25D366] p-4 rounded-full shadow-2xl cursor-pointer hover:scale-110 transition-transform flex items-center justify-center text-white">
+<svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766 0-3.18-2.587-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-1.557-.594-2.618-1.536-1.061-.941-1.39-1.332-1.39-1.332-.576-.71-.622-1.576-.081-2.12.18-.182.404-.216.541-.216.136 0 .272.001.383.006.115.005.271-.044.424.321.153.366.524 1.27.57 1.364.045.093.076.202.015.323s-.091.202-.181.303c-.09.102-.192.226-.273.303-.091.086-.187.181-.081.362.106.182.469.774 1.006 1.25.69.615 1.272.806 1.453.897.181.091.287.076.393-.045.106-.121.454-.53.575-.712.12-.182.242-.151.409-.091.166.061 1.057.499 1.238.59.181.091.303.136.348.212.045.075.045.438-.099.843zM12 2C6.477 2 2 6.477 2 12c0 1.891.528 3.66 1.442 5.167L2 22l4.991-1.312C8.423 21.503 10.142 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"></path></svg>
+</div>
+</div>
+</body>
+</html>
